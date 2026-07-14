@@ -30,6 +30,6 @@ export async function getGuildConfig(guildId) {
   return GuildConfig.findOneAndUpdate(
     { guildId },
     { $setOnInsert: { guildId } },
-    { new: true, upsert: true, setDefaultsOnInsert: true },
+    { returnDocument: 'after', upsert: true, setDefaultsOnInsert: true },
   );
 }

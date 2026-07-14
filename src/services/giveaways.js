@@ -80,7 +80,7 @@ export async function claimAndEnd(client, giveawayId = null) {
   const giveaway = await Giveaway.findOneAndUpdate(
     { ...scope, $or: [{ status: 'active' }, { status: 'ending', processingStartedAt: { $lt: stale } }] },
     { $set: { status: 'ending', processingStartedAt: now } },
-    { new: true, sort: { endsAt: 1 } },
+    { returnDocument: 'after', sort: { endsAt: 1 } },
   );
   if (!giveaway) return null;
 
