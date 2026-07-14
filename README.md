@@ -61,4 +61,3 @@ Discord's member-join event does not include the invite code. The bot compares i
 - Rerolls exclude every previously selected winner and recheck eligibility.
 - Run `npm test` and `npm run check` after changes.
 # advance-giveaway-bot
-# advance-giveaway-bot
