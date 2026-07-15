@@ -96,7 +96,7 @@ export async function claimAndEnd(client, giveawayId = null) {
 
     const channel = guild.channels.cache.get(giveaway.channelId) ?? await guild.channels.fetch(giveaway.channelId);
     const announcement = giveaway.winners.length
-      ? `🎉 Congratulations ${giveaway.winners.map((id) => `<@${id}>`).join(', ')}! You won **${giveaway.prize}**.\nhttps://discord.com/channels/${giveaway.guildId}/${giveaway.channelId}/${giveaway.messageId}`
+      ? `🎉 Congratulations ${giveaway.winners.map((id) => `<@${id}>`).join(', ')}! You won **${giveaway.prize}**.`
       : `No eligible winners were found for **${giveaway.prize}**.`;
     await channel.send({ content: announcement, allowedMentions: { users: giveaway.winners } });
     await Promise.allSettled(giveaway.winners.map(async (userId) => {

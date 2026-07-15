@@ -44,6 +44,30 @@ Set `DISCORD_GUILD_ID` while developing for immediate guild command updates. Rem
 
 To copy a message ID, enable Discord Developer Mode, right-click the giveaway message, and choose **Copy Message ID**.
 
+## Configuration and giveaway creation
+
+Use `/giveaway config` to customize the giveaway embed, entry button, bonus roles, and manager roles.
+
+![Giveaway configuration](assets/Giveaways/Config.png)
+
+Use `/giveaway start` to enter the giveaway details and create a preview before publishing it.
+
+![Create a giveaway](assets/Giveaways/Create.png)
+
+After the preview is confirmed, the bot publishes the giveaway in the selected channel so members can enter.
+
+![Published giveaway](assets/Giveaways/Start.png)
+
+## Giveaway results
+
+When a giveaway ends, the bot announces the winner in the giveaway channel.
+
+![Giveaway result in the channel](assets/Giveaways/End_Channel.png)
+
+The winner also receives a direct message with the giveaway result, provided their Discord privacy settings allow DMs from server members.
+
+![Giveaway winner direct message](assets/Giveaways/End_DM.png)
+
 ## Embed placeholders
 
 `{prize}` `{winners}` `{entries}` `{host}` `{end_timestamp}` `{end_relative}` `{requirements}` `{server}` `{channel}` `{giveaway_id}`
